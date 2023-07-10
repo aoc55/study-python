@@ -15,7 +15,7 @@ from typing import MutableSequence
 def bubble_sort_v1(a: MutableSequence) -> None:
     n = len(a)
     for i in range(n - 1):
-        for j in range(n -1, i, -1):
+        for j in range(n - 1, i, -1):
             if a[j-1] > a[j]:
                 temp = a[j-1]
                 a[j-1] = a[j]
@@ -51,7 +51,7 @@ def bubble_sort_v4_advanced(a: MutableSequence) -> None:
     n = len(a)
     k = n-1
     while k > 0:
-        last = 0
+        last = 0    # 중요 (Swap 이 한번도 안 이루어질 경우 탈출조건)
         for j in range(k):
             if a[j] > a[j+1]:
                 temp = a[j+1]
